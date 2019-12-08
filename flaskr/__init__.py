@@ -25,13 +25,13 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/hello')
+    @app.route('/')
     def hello():
-        return 'Hello, World!'
+        response = {'success': True, 'message': 'Welcome to the Flask AI API.'}
+        return response 
     
-    # if we had a db
-    # from . import db
-    # db.init_app(app)
+    from . import db
+    db.init_app(app)
 
     from . import api
     app.register_blueprint(api.bp)

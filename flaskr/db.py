@@ -1,5 +1,3 @@
-# this is for if I needed a db for this API, will keep commented out for now
-'''
 import sqlite3
 
 import click
@@ -41,4 +39,3 @@ def init_db_command():
     """Clear the existing data and create new tables."""
     init_db()
     click.echo('Initialized the database.')
-'''
